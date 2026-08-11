@@ -1,0 +1,35 @@
+a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.image-container {
+    width: 50% !important;
+    height: 600px;
+    opacity: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid black;
+    background-color: rgba(254, 254, 254, 1);
+
+    &[data-imgName="IAN_CONCEPT_ART.jpeg"] {
+        background-image: url("/assets/IAN_CONCEPT_ART.jpeg");
+    }
+    &[data-imgName="IAN_SKETCHES.jpeg"] {
+        background-image: url("/assets/IAN_SKETCHES.jpeg");
+
+    }
+
+    & > h1 {
+        opacity: 0;
+    }
+
+    &:hover {
+        background-blend-mode: lighten;
+
+        & > h1 {
+            opacity: 1;
+        }
+    }
+}

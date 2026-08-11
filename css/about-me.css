@@ -1,0 +1,13 @@
+a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.image-container {
+    width: 50% !important;
+    height: 600px !important;
+}
+
+div[data-margin="10"] {
+    margin-top: 100px !important;
+}
