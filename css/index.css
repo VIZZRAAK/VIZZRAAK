@@ -1,35 +1,113 @@
+body {
+    opacity: 0;
+    animation: fadeIn 0.5s ease 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 a {
     color: black !important;
     text-decoration: none !important;
 }
 
-.image-container {
-    width: 50% !important;
+.image-label {
+    margin-top: -75%;
+}
+
+@media (0px <= width <= 400px) {
+    .bg-image-wrapper {
+        width: 100% !important;
+        height: 200px !important;
+    }
+}
+
+@media (401px <= width <= 500px) {
+    .bg-image-wrapper {
+        width: 100% !important;
+        height: 300px !important;
+    }
+}
+
+@media (500px <= width <= 768px) {
+    .bg-image-wrapper {
+        width: 100% !important;
+        height: 500px !important;
+    }
+}
+
+@media (769px <= width <= 1200px) {
+    .bg-image-wrapper {
+        width: 40% !important;
+        height: 300px !important;
+    }
+}
+
+@media (width >= 1200px) {
+    .bg-image-wrapper {
+        & > .image-container {
+            &[data-imgName="IAN_CONCEPT_ART_COVER"] {
+                background-image: url("/assets/concept-art/Amir1.png");
+                background-size: 110%;
+            }
+            &[data-imgName="IAN_DESIGN_COVER"] {
+                background-image: url("/assets/designs/1789617160512-37d362ee-7aab-4959-8dd6-a20878af4e21_1.png");
+                background-size: 90%;
+            }
+            &[data-imgName="IAN_PHOTOGRAPHY_COVER"] {
+                background-image: url("/assets/photography/GROUP_PICTURE.png");
+                background-size: 100%;
+            }
+        }
+    }
+}
+
+.bg-image-wrapper {
     height: 600px;
+    width: 30%;
+
+    & h1 {
+        opacity: 0;
+    }
+
+    & > div {
+        opacity: 1;
+    }
+
+    &:hover {
+        & > div {
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+        }
+        & h1 {
+            transition: opacity 0.3s ease-in-out;
+            opacity: 1;
+        }
+    }
+}
+
+.image-container {
+    width: 100% !important;
+    height: 100% !important;
     opacity: 1;
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     border: 1px solid black;
     background-color: rgba(254, 254, 254, 1);
+    cursor: pointer;
 
-    &[data-imgName="IAN_CONCEPT_ART.jpeg"] {
-        background-image: url("/assets/IAN_CONCEPT_ART.jpeg");
+    &[data-imgName="IAN_CONCEPT_ART_COVER"] {
+        background-image: url("/assets/concept-art/Amir1.png");
+        background-size: 100%;
     }
-    &[data-imgName="IAN_SKETCHES.jpeg"] {
-        background-image: url("/assets/IAN_SKETCHES.jpeg");
-
+    &[data-imgName="IAN_DESIGN_COVER"] {
+        background-image: url("/assets/designs/1789617160512-37d362ee-7aab-4959-8dd6-a20878af4e21_1.png");
+        background-size: 60%;
     }
-
-    & > h1 {
-        opacity: 0;
-    }
-
-    &:hover {
-        background-blend-mode: lighten;
-
-        & > h1 {
-            opacity: 1;
-        }
+    &[data-imgName="IAN_PHOTOGRAPHY_COVER"] {
+        background-image: url("/assets/photography/GROUP_PICTURE.png");
+        background-size: 100%;
     }
 }
