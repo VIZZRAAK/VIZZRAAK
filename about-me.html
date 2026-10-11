@@ -36,7 +36,7 @@
 		<meta name="twitter:url" content="https://ianadair.com"/>
 		<link rel="icon" href="/assets/favicon.ico">
         <!--CSS Linking-->
-		<link rel="stylesheet" type="text/css" href="/css/about-me.css" />
+		<link rel="stylesheet" type="text/css" href="/css/index.css" />
 		<title>
 			Ian Adair | About Me
 		</title>    
@@ -62,16 +62,18 @@
 		</script>
     </head>
     <body class="p-5">
-        <div class="h-25 mb-5">
-            <nav>
-                <div class="d-flex w-full">
-                    <h1 class="fs-4 fw-medium"><a href="/">Ian Adair</a></h1>
-                    <h1 class="fs-4 fw-medium ms-auto"><a href="/about-me.html">About Me</a></h1>
-                </div>
-            </nav>
-        </div>
+        <header>
+            <div class="h-25 mb-5 px-5 pt-5 pb-1 text-break">
+                <nav>
+                    <div class="d-flex w-full">
+                        <h1 class="fs-4 fw-medium"><a href="/">Ian Adair</a></h1>
+                        <h1 class="fs-4 fw-medium ms-auto"><a href="/about-me.html">About Me</a></h1>
+                    </div>
+                </nav>
+            </div>
+        </header>
         <div class="mt-5">
-            <div class="image-container">
+            <div class="profile-image-container">
                 <img class="w-100 h-100 object-fit-cover" src="/assets/me.jpeg" alt="Could not load..."/>
             </div>
             <div class="w-50"></div>
@@ -99,16 +101,16 @@
                 <div class="w-20 d-flex flex-column flex-grow-1"></div>
                 <div class="w-20 d-flex flex-column flex-grow-1"></div>
             </div>
-            <div class="h-20 w-100 d-flex flex-row gap-5" data-margin="10">
-                <div class="flex-column">
-                    <a class="text-decoration-underline fs-3 fw-lighter" href="mailto:ianfisheggs@gmail.com">
-                        ianfisheggs@gmail.com
-                    </a>
-                </div>
-                <div class="flex-column">
-                    <p class="fs-3 fw-lighter">510.292.0251</p>
-                </div>
-            </div>
         </div>
+        <footer>
+			<div class="pt-5 pb-3 h-20 w-100 d-flex flex-row text-break justify-content-start gap-5" data-margin="10">
+				<div class="d-flex flex-column flex-md-row gap-2 gap-lg-5">
+					<a class="text-decoration-underline fs-3 d-flex fw-lighter" href="mailto:ianfisheggs@gmail.com">
+						ianfisheggs@gmail.com
+					</a>
+					<p class="fs-3 fw-lighter d-flex">510.292.0251</p>
+				</div>
+			</div>
+        </footer>
     </body>
 </html>
