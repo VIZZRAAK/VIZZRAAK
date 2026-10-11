@@ -110,6 +110,10 @@ a {
     }
 }
 
+.footer-text-div {
+    transition: opacity 1s ease-in-out;
+}
+
 .image-container {
     width: 100% !important;
     height: 100% !important;
